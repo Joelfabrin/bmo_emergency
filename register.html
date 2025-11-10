@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/burger.css" />
+    <link rel="stylesheet" href="css/cards.css" />
+    <link rel="stylesheet" href="css/forms.css" />
+    <link rel="icon" type="image/png" href="img/fav.png" />
+    <title>Emergency Site</title>
+  </head>
+  <body id="register">
+    <header>
+      <nav>
+        <div id="logotype-wrapper" class="logo">
+          <a href="index.html">
+            <img
+              src="img/logo-type.svg"
+              alt="BMO titel logo"
+              class="logo-img"
+            />
+          </a>
+        </div>
+        <ul class="menu">
+          <li><a class="menuItem" href="instruction.html">INFORMATION</a></li>
+          <li><a class="menuItem" href="register.html">INDBERET</a></li>
+        </ul>
+        <button class="burger">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <h1>INDBERET</h1>
+      <section id="form-section">
+        <article id="form-info">
+          <h2>BMO MANGEL? INDBERET DET HER</h2>
+          <p>
+            Hjælp os med at holde overblik over landets BMO krise. Udfyld
+            formularen og del dine observationer, så vores kriseteam hurtigt kan
+            reagere.
+          </p>
+          <ul class="form-highlights">
+            <li>Indsend lokale observationer fra din bydel</li>
+            <li>Fortæl hvor du sidst så en ægte BMO</li>
+            <li>Hold dig opdateret på status og anbefalinger</li>
+          </ul>
+          <p class="form-note">
+            Alle indberetninger bliver behandlet fortroligt og hjælper os med at
+            beskytte morgendagens morgenmad.
+          </p>
+        </article>
+        <aside id="form-alert">
+          <h2>ALARMKANAL</h2>
+          <p>
+            Har du akut brug for assistance? Kontakt vores døgnbemandede hotline
+            eller følg de seneste anbefalinger fra beredskabet.
+          </p>
+          <div class="alert-actions">
+            <a class="cta-link" href="tel:+4511223344">Ring 1122 3344</a>
+            <a class="cta-link secondary" href="instruction.html"
+              >Læs instruktioner</a
+            >
+          </div>
+        </aside>
+      </section>
+
+      <div class="frame">
+        <form action="#" method="post" novalidate>
+          <div class="grid">
+            <div class="field">
+              <label for="vælg-bydel">HVILKEN BYDEL ER DU FRA ?</label>
+              <select name="bydel" id="bydel">
+                <option value="">--VÆLG EN BYDEL--</option>
+                <option value="mand">ØSTERBRO</option>
+                <option value="kvinde">NØRREBRO</option>
+                <option value="andet">VESTERBRO</option>
+                <option value="andet">AMAGER</option>
+                <option value="andet">FREDERIKSBERG</option>
+                <option value="andet">VALBY</option>
+                <option value="andet">BRØNSHØJ</option>
+                <option value="andet">VANLØSE</option>
+                <option value="andet">HVIDOVRE</option>
+                <option value="andet">GLADSAXE</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="vælg-køn">KØN ?</label>
+              <select name="køn" id="køn">
+                <option value="">-VÆLG ET KØN-</option>
+                <option value="mand">MAND</option>
+                <option value="kvinde">KVINDE</option>
+                <option value="andet">ANDET</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="vælg-bager">FORETRUKNE BAGER ?</label>
+              <select name="bager" id="bager">
+                <option value="">--VÆLG EN BAGER--</option>
+                <option value="mand">LAGEKAGEHUSET</option>
+                <option value="kvinde">JUNO THE BAKERY</option>
+                <option value="andet">ANDERSEN BAKERY</option>
+                <option value="andet">BAGERIET BRØD</option>
+                <option value="andet">EMMERYS</option>
+                <option value="andet">BUKA BAKERY</option>
+                <option value="andet">HART BAKERY</option>
+                <option value="andet">ANDERSEN & MAILLARD</option>
+                <option value="andet">SKIPPER BAGERI</option>
+                <option value="andet">BODENHOFFS BAGERI</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="birth">FØDSELSDAG ?</label>
+              <input id="birth" name="birth" type="date" />
+            </div>
+
+            <div class="field half">
+              <label
+                >HAR DU SET NOGEN ELLER SELV VÆRET I BESIDDELSE AF EN BMO DEN
+                SENESTE UGE ?</label
+              >
+              <div class="yn-group">
+                <label class="radio"
+                  ><input type="radio" name="bno" value="ja" /> JA</label
+                >
+                <label class="radio"
+                  ><input type="radio" name="bno" value="nej" /> NEJ</label
+                >
+              </div>
+            </div>
+
+            <div class="field half">
+              <label for="message"
+                >HVIS JA, HVOR, HVORNÅR OG HVORDAN FIK DU FAT I DEN, ELLER MED
+                HVEM OG HVOR HAR DU SET EN ?</label
+              >
+              <textarea id="message" name="message"></textarea>
+            </div>
+
+            <div class="panel">
+              <div class="grid-inner">
+                <div class="field">
+                  <label for="fullname">FULDE NAVN :</label>
+                  <input id="fullname" name="fullname" type="text" />
+                </div>
+                <div class="field">
+                  <label for="email">EMAIL :</label>
+                  <input id="email" name="email" type="email" />
+                </div>
+                <div class="field">
+                  <label for="phone">TELEFON NUMMER :</label>
+                  <input id="phone" name="phone" type="tel" />
+                </div>
+              </div>
+            </div>
+            <div class="submit-wrap">
+              <div class="form-group">
+                <label for="accept_terms" class="terms-label">
+                  <input
+                    type="checkbox"
+                    id="accept_terms"
+                    name="accept_terms"
+                    value="yes"
+                    aria-describedby="terms-error"
+                    required
+                  />
+                  <span>Accept terms</span>
+                </label>
+              </div>
+              <p class="error-message" id="terms-error" hidden>
+                PLEASE ACCEPT TERMS
+              </p>
+              <button class="submit" type="submit" disabled>
+                Indsend <span class="arrow">→</span>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <section id="form-summary">
+        <h2>Summary</h2>
+
+        <div>
+          <p>Bydel: <span id="summary-bydel">-</span></p>
+          <p>Køn: <span id="summary-køn">-</span></p>
+          <p>Bager: <span id="summary-bager">-</span></p>
+          <p>Fødselsdag: <span id="summary-birth">-</span></p>
+          <p>Observation: <span id="summary-bno">-</span></p>
+          <p>Beskrivelse: <span id="summary-message">-</span></p>
+          <p>Fulde navn: <span id="summary-fullname">-</span></p>
+          <p>Email: <span id="summary-email">-</span></p>
+          <p>Telefon nr: <span id="summary-phone">-</span></p>
+          <p>Vilkår accepteret: <span id="summary-accept">-</span></p>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p class="footer-brand">BMO KRISESTABEN</p>
+        <p class="footer-contact">
+          Akut hotline:
+          <a href="tel:+4511223344">+45&nbsp;11&nbsp;22&nbsp;33&nbsp;44</a>
+        </p>
+        <nav class="footer-nav">
+          <a href="instruction.html">Instruktioner</a>
+          <a href="register.html">Indberet</a>
+          <a href="mailto:kontakt@bmo.dk">Kontakt</a>
+        </nav>
+        <p class="footer-copy">
+          Copyright 2025 BMO. Alle rettigheder forbeholdes.
+        </p>
+      </div>
+    </footer>
+    <script src="js/burger.js"></script>
+    <script src="js/forms.js"></script>
+  </body>
+</html>
