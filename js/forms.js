@@ -24,7 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const bagerField = form.querySelector("#bager");
   const acceptField = form.querySelector("#accept_terms");
   const termsError = document.getElementById("terms-error");
-  let termsTouched = false;
 
   const setSummaryValue = (key, value) => {
     const target = summaryFields[key];
@@ -53,15 +52,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const updateTermsError = () => {
     if (!termsError || !acceptField) return;
-    const shouldShow = termsTouched && !acceptField.checked;
-    termsError.hidden = !shouldShow;
+    termsError.hidden = acceptField.checked;
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
     if (!form.checkValidity()) {
-      termsTouched = true;
       updateTermsError();
       focusFirstInvalid();
       form.reportValidity();
@@ -93,7 +90,6 @@ document.addEventListener("DOMContentLoaded", () => {
     setSummaryValue("accept", acceptTerms ? "Ja" : "Nej");
 
     form.reset();
-    termsTouched = false;
     updateSubmitState();
   };
 
@@ -101,19 +97,16 @@ document.addEventListener("DOMContentLoaded", () => {
     event.preventDefault();
     event.target.focus();
     if (event.target === acceptField) {
-      termsTouched = true;
       updateTermsError();
     }
   };
 
   acceptField?.addEventListener("change", () => {
-    termsTouched = true;
     updateTermsError();
     updateSubmitState();
   });
 
   acceptField?.addEventListener("blur", () => {
-    termsTouched = true;
     updateTermsError();
   });
 
