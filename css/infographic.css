@@ -111,3 +111,53 @@
 .cls-10 {
   fill: #823135;
 }
+
+/* Dark mode */
+html.dark .info-graphic,
+html.dark .info-text {
+  background-color: #10131c;
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.65);
+  color: #f1f1f5;
+}
+
+html.dark .info-graphic {
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+html.dark .info-graphic button {
+  background-color: #ae2428;
+  color: #fff8eb;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.45);
+}
+
+html.dark .info-graphic button:hover {
+  background-color: #c9494e;
+}
+
+html.dark .info-text h2 {
+  background-color: #24273a;
+  color: #f9f2d8;
+}
+
+html.dark .info-text p {
+  color: #d5d9f1;
+}
+
+html.dark .info-box {
+  background-color: #151926;
+  color: #f1f1f5;
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 18px 30px rgba(0, 0, 0, 0.5);
+}
+
+html.dark .info-box:nth-of-type(2n) {
+  background-color: #1b2030;
+}
+
+html.dark .info-box h3 {
+  color: #ffd47a;
+}
+
+html.dark #head-txt {
+  fill: #f5f6fa;
+}

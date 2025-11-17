@@ -121,3 +121,44 @@ details[open] .summary-label--closed {
 .news_card:last-child {
   text-align: center;
 }
+
+/* Dark toggle styling */
+html.dark .daily_card {
+  background-color: #1f1f28;
+  color: #f1f1f5;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+}
+
+html.dark .daily_card img {
+  filter: brightness(0.85);
+}
+
+html.dark .daily_text h2 {
+  background-color: #24273a;
+  color: #f9f2d8;
+}
+
+html.dark .news_card {
+  background-color: #1c1c26;
+  color: #f1f1f5;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+}
+
+html.dark .news_card:nth-child(2n) {
+  background-color: #242435;
+}
+
+html.dark .news_card:first-child:before {
+  background-color: #24273a;
+  color: #f9f2d8;
+}
+
+html.dark .news_card .cta_btn {
+  background-color: #ae2428;
+  color: #fff;
+}
+
+html.dark .news_card:nth-of-type(2n) .cta_btn {
+  background-color: #ae2428;
+  color: #fff;
+}
