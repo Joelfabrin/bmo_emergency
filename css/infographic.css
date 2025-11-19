@@ -26,6 +26,7 @@
   padding: 1rem 0;
 }
 .info-text {
+  margin-top: clamp(4rem, 10vw, 7rem);
   padding: 20px 0;
 }
 .info-graphic button {
